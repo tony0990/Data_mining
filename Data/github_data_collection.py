@@ -12,7 +12,7 @@ import pandas as pd
 
 # CONFIGURATION
 
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GITHUB_TOKEN = "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"
 
 
 SEARCH_QUERIES = [
@@ -110,6 +110,7 @@ def extract_fields(repo: dict, topic_label: str) -> dict:
         "topics":       repo.get("topics", []),           
         "topics_str":   "|".join(repo.get("topics", [])), # separated for CSV
         "search_query": topic_label,                      # which query found this repo
+        
     }
 
 
@@ -127,6 +128,7 @@ def collect_all(queries: list[str], repos_per_query: int) -> list[dict]:
                 all_repos.append(extract_fields(repo, query))
 
     return all_repos
+
 
 
 def save_results(records: list[dict], output_dir: str) -> None:
@@ -172,10 +174,10 @@ def print_summary(df: pd.DataFrame) -> None:
 if __name__ == "__main__":
     print("=" * 50)
     print("GitHub Repository Data Collector")
-    print("Data Mining Project — Sondos")
+
     print("=" * 50)
 
-    if GITHUB_TOKEN == "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":
+    if GITHUB_TOKEN == "YOUR_TOKEN_HERE":
         print("\nWARNING: No GitHub token set!")
         print("Unauthenticated requests are limited to 10 req/min.")
         print("Set GITHUB_TOKEN environment variable or edit the script.\n")
