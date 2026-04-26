@@ -2447,7 +2447,7 @@ Easily build rich and productive interactive web apps in R &mdash; no HTML/CSS/J
 
 ## Features
 
-* An intuitive and extensible [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) model which makes it easy to transform existing R code into a ""live app"" where output automatically react to new user input.
+* An intuitive and extensible [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) model which makes it easy to transform existing R code into a ""live app"" where outputs automatically react to new user input.
   * Compared to event-based programming, reactivity allows Shiny to do the minimum amount of work when input(s) change, and allows humans to more easily reason about complex [MVC logic](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 * A prebuilt set of highly sophisticated, customizable, and easy-to-use widgets (e.g., plots, tables, sliders, dropdowns, date pickers, and more).
 * An attractive default look based on [Bootstrap](https://getbootstrap.com/) which can also be easily customized with the [bslib](https://github.com/rstudio/bslib) package or avoided entirely with more direct R bindings to HTML/CSS/JavaScript.
@@ -7730,7 +7730,7 @@ Join us ([*Discord*](https://discord.camel-ai.org/) or [*WeChat*](https://ghli.o
 lectures,oxford-cs-deepnlp-2017/lectures,Oxford Deep NLP 2017 course,,15855,3563,15855,deep-learning|machine-learning|natural-language-processing|nlp|oxford,natural-language-processing,"# Preamble
 This repository contains the lecture slides and course description for the [Deep Natural Language Processing](http://www.cs.ox.ac.uk/teaching/courses/2016-2017/dl/) course offered in Hilary Term 2017 at the University of Oxford. 
 
-This is an advanced course on natural language processing. Automatically processing natural language inputs and producing language output is a key component of Artificial General Intelligence. The ambiguities and noise inherent in human communication render traditional symbolic AI techniques ineffective for representing and analysing language data. Recently statistical techniques based on neural networks have achieved a number of remarkable successes in natural language processing leading to a great deal of commercial and academic interest in the field
+This is an advanced course on natural language processing. Automatically processing natural language inputs and producing language outputs is a key component of Artificial General Intelligence. The ambiguities and noise inherent in human communication render traditional symbolic AI techniques ineffective for representing and analysing language data. Recently statistical techniques based on neural networks have achieved a number of remarkable successes in natural language processing leading to a great deal of commercial and academic interest in the field
 
 This is an applied course focussing on recent advances in analysing and generating speech and text using recurrent neural networks. We introduce the mathematical definitions of the relevant machine learning models and derive their associated optimisation algorithms. The course covers a range of applications of neural networks in NLP including analysing latent dimensions in text, transcribing speech to text, translating between languages, and answering questions. These topics are organised into three high level themes forming a progression from understanding the use of neural networks for sequential language modelling, to understanding their use as conditional language models for transduction tasks, and finally to approaches employing these techniques in combination with other mechanisms for advanced applications. Throughout the course the practical implementation of such models on CPU and GPU hardware is also discussed.
 
@@ -9142,7 +9142,7 @@ mkdir build; cd build; cmake .. -DUSE_AVX_INSTRUCTIONS=1; cmake --build .
 
 Doing so will make some things run faster.
 
-Finally, Visual Studio users should usually do everything in 64bit mode.  By default Visual Studio is 32bit, both in its output and its own execution, so you have to explicitly tell it to use 64bits.  Since it's not the 1990s anymore you probably want to use 64bits.  Do that with a cmake invocation like this:
+Finally, Visual Studio users should usually do everything in 64bit mode.  By default Visual Studio is 32bit, both in its outputs and its own execution, so you have to explicitly tell it to use 64bits.  Since it's not the 1990s anymore you probably want to use 64bits.  Do that with a cmake invocation like this:
 ```bash
 cmake .. -G ""Visual Studio 14 2015 Win64"" -T host=x64
 ```
@@ -13503,7 +13503,7 @@ outlines,dottxt-ai/outlines,Structured Outputs,Python,13732,688,13732,cfg|genera
 <img src=""./docs/assets/images/logo-dark-mode.svg#gh-dark-mode-only"" alt=""Outlines Logo"" width=300></img>
 
 
- 🗒️ *Structured output for LLMs* 🗒️
+ 🗒️ *Structured outputs for LLMs* 🗒️
 
 Made with ❤👷️ by the team at [.txt](https://dottxt.co)
 <br>Trusted by NVIDIA, Cohere, HuggingFace, vLLM, etc.
@@ -13642,7 +13642,7 @@ awesome-generative-ai,steven2358/awesome-generative-ai,A curated list of modern 
 
 > A curated list of modern Generative Artificial Intelligence projects and services.
 
-Generative Artificial Intelligence is a technology that creates original content such as images, sounds, and texts by using machine learning algorithms that are trained on large amounts of data. Unlike other forms of AI, it is capable of creating unique and previously unseen output such as photorealistic images, digital art, music, and writing. These output often have their own unique style and can even be hard to distinguish from human-created works. Generative AI has a wide range of applications in fields such as of art, entertainment, marketing, academia, and computer science.
+Generative Artificial Intelligence is a technology that creates original content such as images, sounds, and texts by using machine learning algorithms that are trained on large amounts of data. Unlike other forms of AI, it is capable of creating unique and previously unseen outputs such as photorealistic images, digital art, music, and writing. These outputs often have their own unique style and can even be hard to distinguish from human-created works. Generative AI has a wide range of applications in fields such as of art, entertainment, marketing, academia, and computer science.
 
 Contributions to this list are welcome. Before submitting your suggestions, please review the [Contribution Guidelines](CONTRIBUTING.md) to ensure your entries meet the criteria. Add links through [pull requests](https://github.com/steven2358/awesome-generative-ai/pulls) or create an [issue](https://github.com/steven2358/awesome-generative-ai/issues) to start a discussion. More projects can be found in the [Discoveries List](DISCOVERIES.md), where we showcase a wide range of up-and-coming Generative AI projects.
 
@@ -15523,7 +15523,7 @@ across multiple machines, and redundant computations (even across
 runs and users) are eliminated by its memoization cache. Reflow
 evaluates its programs
 [incrementally](https://en.wikipedia.org/wiki/Incremental_computing):
-whenever the input data or program changes, only those output that
+whenever the input data or program changes, only those outputs that
 depend on the changed data or code are recomputed.
 
 In addition to the default cluster computing mode, Reflow programs
