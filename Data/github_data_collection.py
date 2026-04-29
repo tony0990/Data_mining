@@ -12,26 +12,68 @@ import pandas as pd
 
 # CONFIGURATION
 
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 
 
 SEARCH_QUERIES = [
+   
+   
     "machine-learning",
-    "web-development",
     "deep-learning",
-    "mobile-app",
-    "data-science",
-    "natural-language-processing",
-    "computer-vision",
-    "devops",
     "reinforcement-learning",
     "generative-ai",
+    "natural-language-processing",
+    "computer-vision",
+    "data-science",
+    "neural-network",
+    "llm",
+    "pytorch",
+    "tensorflow",
+
+   
+    "web-development",
+    "rest-api",
+    "graphql",
+    "microservices",
+    "docker",
     "cloud-computing",
+    "serverless",
+    "authentication",
+    "database",
+    "fastapi",
+
+    
+    "mobile-app",
+    "react",
+    "flutter",
+    "android",
+    "ios",
+
+    
+    "devops",
+    "ci-cd",
     "cybersecurity",
-    "docker"
+    "testing",
+    "open-source",
+    "automation",
+    "monitoring",
+
+   
+    "blockchain",
+    "game-development",
+    "iot",
+    "robotics",
+    "data-visualization",
+    "mlops",
+    "data-engineering",
+    "scraping",
+    "augmented-reality",
+    "embedded-systems",
+    "cryptocurrency",
+    "linux",
 ]
 
-REPOS_PER_QUERY = 50       
+REPOS_PER_QUERY = 100       
 MIN_STARS       = 50       
 OUTPUT_DIR      = "data"   
 

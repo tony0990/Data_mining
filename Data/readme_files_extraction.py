@@ -8,10 +8,10 @@ import requests
 import pandas as pd
 from glob import glob
 
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 
 DATA_DIR     = "data"              
-README_LIMIT = 2000               
+README_LIMIT = 5000               
 SLEEP_TIME   = 0.5                 
 # ─────────────────────────────────────────────
 
