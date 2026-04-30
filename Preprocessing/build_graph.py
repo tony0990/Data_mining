@@ -9,17 +9,20 @@ import pandas as pd
 def build_graph(df):
     print("Building graph data...")
 
-    # Build nodes
-    nodes = df[["full_name", "stars", "language"]].rename(columns={"full_name": "id"}).to_dict("records")
+    # Nodes — one per repo
+    nodes = df[["full_name", "stars", "language"]].rename(
+        columns={"full_name": "id"}
+    ).to_dict("records")
 
-    # Build inverted index: topic -> list of repo indices
-    # This is O(n * avg_topics) instead of O(n^2)
+    # Inverted index: topic -> list of repo indices
+    # O(n * avg_topics) instead of O(n^2)
     topic_to_repos = {}
     for idx, row in df.iterrows():
         for topic in row["topics_list"]:
             topic_to_repos.setdefault(topic, []).append(idx)
 
-    # Build edges from inverted index
+    # Edges: repos sharing at least 1 topic get a weighted edge
+    # weight = number of shared topics
     edge_weights = {}
     for topic, indices in topic_to_repos.items():
         for i in range(len(indices)):
@@ -35,9 +38,13 @@ def build_graph(df):
     ]
 
     nodes_df = pd.DataFrame(nodes)
-    edges_df = pd.DataFrame(edges) if edges else pd.DataFrame(columns=["source", "target", "weight"])
+    edges_df = (
+        pd.DataFrame(edges)
+        if edges
+        else pd.DataFrame(columns=["source", "target", "weight"])
+    )
 
-    print(f"  Nodes : {len(nodes_df)}")
-    print(f"  Edges : {len(edges_df)}")
+    print(f"  Nodes: {len(nodes_df)}")
+    print(f"  Edges: {len(edges_df)}")
 
     return nodes_df, edges_df

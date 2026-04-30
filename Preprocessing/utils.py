@@ -1,8 +1,3 @@
-"""
-shared helper functions for loading/saving CSVs and normalizing
-text/topics/readme content used across all other modules
-"""
-
 import re
 import pandas as pd
 import json
@@ -17,7 +12,8 @@ def save_csv(df, path):
 
 
 def save_json(df, path):
-    df.to_json(path, orient="records", indent=2, force_ascii=False)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(df.to_dict(orient="records"), f, indent=2, ensure_ascii=False)
 
 
 def normalize_text(text):
@@ -27,17 +23,21 @@ def normalize_text(text):
 
 
 def normalize_readme(text):
-    """Clean raw README content for BERT: strip markdown, collapse whitespace."""
-    if pd.isna(text) or str(text).strip() == "":
+    if not text:
         return ""
     text = str(text)
-    # Remove markdown headers, code blocks, URLs, badges
-    text = re.sub(r"!\[.*?\]\(.*?\)", "", text)          # images
-    text = re.sub(r"\[.*?\]\(.*?\)", "", text)            # links
-    text = re.sub(r"`{1,3}.*?`{1,3}", "", text, flags=re.DOTALL)  # inline/block code
-    text = re.sub(r"#+\s*", "", text)                     # headers
-    text = re.sub(r"\s+", " ", text)                      # collapse whitespace
-    return text.strip()
+    # Remove HTML tags
+    text = re.sub(r"<[^>]+>", " ", text)
+    # Remove URLs
+    text = re.sub(r"http\S+|www\S+", " ", text)
+    # Remove markdown images/links
+    text = re.sub(r"!\[.*?\]\(.*?\)", " ", text)
+    text = re.sub(r"\[.*?\]\(.*?\)", " ", text)
+    # Remove special characters
+    text = re.sub(r"[^a-zA-Z\s]", " ", text)
+    # Collapse spaces
+    text = re.sub(r"\s+", " ", text)
+    return text.lower().strip()
 
 
 def split_topics(topics_str):
