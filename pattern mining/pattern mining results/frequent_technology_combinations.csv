@@ -1,0 +1,18 @@
+support,itemsets,length,itemset_text
+0.09854014598540146,lang:python + topic:python,2,lang:python + topic:python
+0.06625491297024144,topic:deep-learning + topic:machine-learning,2,topic:deep-learning + topic:machine-learning
+0.05530600786075238,lang:python + topic:machine-learning,2,lang:python + topic:machine-learning
+0.04744525547445255,lang:python + topic:deep-learning,2,lang:python + topic:deep-learning
+0.04576080853453116,topic:machine-learning + topic:python,2,topic:machine-learning + topic:python
+0.0446378439079169,lang:go + topic:golang,2,lang:go + topic:golang
+0.03705783267827063,lang:go + topic:go,2,lang:go + topic:go
+0.03677709152161707,topic:data-science + topic:machine-learning,2,topic:data-science + topic:machine-learning
+0.03537338573834924,lang:typescript + topic:typescript,2,lang:typescript + topic:typescript
+0.03537338573834924,topic:deep-learning + topic:pytorch,2,topic:deep-learning + topic:pytorch
+0.03537338573834924,lang:python + topic:pytorch,2,lang:python + topic:pytorch
+0.03509264458169568,lang:python + topic:llm,2,lang:python + topic:llm
+0.03481190342504211,lang:python + topic:ai,2,lang:python + topic:ai
+0.033688938798427846,topic:android + topic:ios,2,topic:android + topic:ios
+0.033688938798427846,lang:typescript + topic:react,2,lang:typescript + topic:react
+0.030881527231892195,topic:deep-learning + topic:python,2,topic:deep-learning + topic:python
+0.030320044918585063,topic:ai + topic:llm,2,topic:ai + topic:llm
